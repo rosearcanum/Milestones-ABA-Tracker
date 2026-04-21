@@ -147,6 +147,13 @@ function renderKPIs() {
   document.getElementById('kpi-ok').textContent = ok;
   document.getElementById('kpi-rx').textContent = expRx;
   document.getElementById('kpi-auth').textContent = expAuth;
+    const counts = { all: allClients.length, critical: 0, urgent: 0, warning: 0, ok: 0 };
+  allClients.forEach(c => { counts[getOverallSeverity(c)]++; });
+
+  ['all','critical','urgent','warning','ok'].forEach(k => {
+    const el = document.getElementById('count-' + k);
+    if (el) el.textContent = counts[k];
+  });
 }
 
 function renderTabContent() {
