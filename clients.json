@@ -272,7 +272,7 @@
       "rx": { "status": "ok", "expiration": "08/07/2026" },
       "insurance_card": "missing",
       "cde": "ok",
-      "intake": "missing",
+      "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
       "auth_expiration": "09/11/2026",
