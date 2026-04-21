@@ -353,7 +353,7 @@
     },
     {
       "name": "Evelyn Cardenas Leon",
-      "rx": { "status": "expired", "expiration": "03/16/2027" },
+      "rx": { "status": "ok", "expiration": "03/16/2027" },
       "insurance_card": "ok",
       "cde": "ok",
       "intake": "ok",
@@ -392,20 +392,6 @@
       "bcaba": null,
       "insurance": null,
       "notes": ""
-    },
-    {
-      "name": "Gillian Pena",
-      "rx": { "status": "missing", "expiration": null },
-      "insurance_card": "ok",
-      "cde": "ok",
-      "intake": "ok",
-      "basc": "ok",
-      "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
-      "bcaba": null,
-      "insurance": null,
-      "notes": "RX missing"
     },
     {
       "name": "Irene Cardona",
@@ -653,11 +639,11 @@
       "intake": "missing",
       "basc": "ok",
       "vineland": "expired",
-      "auth_expiration": "03/24/2026",
-      "bcba": "Leidys",
-      "bcaba": "Alfredo",
-      "insurance": "CMS",
-      "notes": "Claudia Mesa doing assessment"
+      "auth_expiration": "09/23/2026",
+      "bcba": "Leidys Martin",
+      "bcaba": "Alfredo Salazar",
+      "insurance": "Sunshine",
+      "notes": ""
     },
     {
       "name": "Lennox Palma",
@@ -793,11 +779,11 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": "03/02/2026",
-      "bcba": "Leidys",
-      "bcaba": "Susej",
-      "insurance": "CMS",
-      "notes": "Leidys doing assessment"
+      "auth_expiration": "08/31/2026",
+      "bcba": "Leidys Martin",
+      "bcaba": "Susej Diaz",
+      "insurance": "Sunshine",
+      "notes": ""
     },
     {
       "name": "Migal Mayo",
@@ -961,11 +947,11 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": "03/20/2026",
-      "bcba": "Leidys",
-      "bcaba": "Susej",
-      "insurance": "CMS",
-      "notes": "Leidys doing assessment. Email sent."
+      "auth_expiration": "09/18/2026",
+      "bcba": "Leidys Martin",
+      "bcaba": "Susej Diaz",
+      "insurance": "Sunshine",
+      "notes": ""
     },
     {
       "name": "Xina Myrick",
