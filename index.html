@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABA Client Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ── Header ──────────────────────────────────────────────────────────── -->
+  <header class="app-header">
+    <div class="app-logo">
+      <div class="logo-mark">🧩</div>
+      <div>
+        <div class="logo-text">ABA Client Tracker</div>
+        <div class="logo-sub">Document &amp; Authorization Manager</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <span id="last-updated"></span>
+      <div class="header-search">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+          <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5" opacity=".5"/>
+          <path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+        </svg>
+        <input
+          type="text"
+          placeholder="Search clients..."
+          oninput="onSearch(this.value)"
+          id="search-input"
+        >
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Sidebar ─────────────────────────────────────────────────────────── -->
+  <nav class="app-sidebar">
+
+    <span class="sidebar-label">Views</span>
+
+    <button class="tab-btn active" data-tab="tasks" onclick="setTab('tasks')">
+      <span class="tab-icon">⚡</span> Task Manager
+    </button>
+    <button class="tab-btn" data-tab="clients" onclick="setTab('clients')">
+      <span class="tab-icon">👥</span> All Clients
+    </button>
+    <button class="tab-btn" data-tab="docs" onclick="setTab('docs')">
+      <span class="tab-icon">📋</span> Documents
+    </button>
+    <button class="tab-btn" data-tab="auth" onclick="setTab('auth')">
+      <span class="tab-icon">🔐</span> Authorizations
+    </button>
+
+    <span class="sidebar-label" style="margin-top:12px">Filter by priority</span>
+
+    <div class="sev-filter-group">
+      <button class="sev-filter-btn active" onclick="setSevFilter(this,'all')">
+        <span><span class="sev-dot sev-dot-all"></span>All</span>
+        <span class="sev-count" id="count-all">—</span>
+      </button>
+      <button class="sev-filter-btn" onclick="setSevFilter(this,'critical')">
+        <span><span class="sev-dot sev-dot-critical"></span>Critical</span>
+        <span class="sev-count" id="count-critical">—</span>
+      </button>
+      <button class="sev-filter-btn" onclick="setSevFilter(this,'urgent')">
+        <span><span class="sev-dot sev-dot-urgent"></span>Urgent</span>
+        <span class="sev-count" id="count-urgent">—</span>
+      </button>
+      <button class="sev-filter-btn" onclick="setSevFilter(this,'warning')">
+        <span><span class="sev-dot sev-dot-warning"></span>Warning</span>
+        <span class="sev-count" id="count-warning">—</span>
+      </button>
+      <button class="sev-filter-btn" onclick="setSevFilter(this,'ok')">
+        <span><span class="sev-dot sev-dot-ok"></span>All clear</span>
+        <span class="sev-count" id="count-ok">—</span>
+      </button>
+    </div>
+
+  </nav>
+
+  <!-- ── Main ────────────────────────────────────────────────────────────── -->
+  <main class="app-main" id="app">
+
+    <!-- KPI bar -->
+    <div class="kpi-bar">
+      <div class="kpi-card">
+        <div class="kpi-label">Critical</div>
+        <div class="kpi-val c-red" id="kpi-critical">—</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Urgent</div>
+        <div class="kpi-val c-orange" id="kpi-urgent">—</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Warnings</div>
+        <div class="kpi-val c-yellow" id="kpi-warning">—</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">All clear</div>
+        <div class="kpi-val c-green" id="kpi-ok">—</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">RX expiring / expired</div>
+        <div class="kpi-val c-orange" id="kpi-rx">—</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Auth expiring / expired</div>
+        <div class="kpi-val c-blue" id="kpi-auth">—</div>
+      </div>
+    </div>
+
+    <!-- Tab content -->
+    <div id="tab-content"></div>
+
+  </main>
+
+</div>
+
+<!-- ── Modal ──────────────────────────────────────────────────────────────── -->
+<div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2 id="modal-title"></h2>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+  // Wire up sidebar sev filter counts after data loads
+  const _origRenderKPIs = renderKPIs;
+  function renderKPIs() {
+    _origRenderKPIs();
+    // update sidebar counts
+    const counts = { all: allClients.length, critical: 0, urgent: 0, warning: 0, ok: 0 };
+    allClients.forEach(c => { counts[getOverallSeverity(c)]++; });
+    ['all','critical','urgent','warning','ok'].forEach(k => {
+      const el = document.getElementById('count-' + k);
+      if (el) el.textContent = counts[k];
+    });
+  }
+
+  function setSevFilter(btn, val) {
+    document.querySelectorAll('.sev-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    onSeverityFilter(val);
+  }
+
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('modal-overlay')) closeModal();
+  }
+</script>
+
+</body>
+</html>
