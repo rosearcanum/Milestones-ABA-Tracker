@@ -2,21 +2,21 @@
   "_instructions": "Edit this file to update client data. Dates use MM/DD/YYYY format. Status fields: 'ok', 'missing', 'expired', or a date string for expiration. Auth expiration is a date string MM/DD/YYYY or null.",
   "clients": [
     {
-      "name": "Adrian",
-      "rx": { "status": "ok", "expiration": null },
+      "name": "Adrian Andrews",
+      "rx": { "status": "ok", "expiration": "12/16/2026" },
       "insurance_card": "ok",
       "cde": "ok",
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
-      "bcaba": null,
+      "auth_expiration": "07/21/2026",
+      "bcba": "Alexandra Gonzalez",
+      "bcaba": "Guillermo Piquera",
       "insurance": null,
       "notes": ""
     },
     {
-      "name": "Adyan",
+      "name": "Adyan Dewan",
       "rx": { "status": "missing", "expiration": null },
       "insurance_card": "missing",
       "cde": "missing",
@@ -37,8 +37,8 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
+      "auth_expiration": "06/01/2026",
+      "bcba": "Leidys Martin",
       "bcaba": null,
       "insurance": null,
       "notes": ""
@@ -51,11 +51,11 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
+      "auth_expiration": "05/01/2026",
+      "bcba": "Odalys Camarero",
       "bcaba": null,
       "insurance": null,
-      "notes": ""
+      "notes": "Authorization request sent"
     },
     {
       "name": "Alfonso Figueroa",
@@ -65,10 +65,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
+      "auth_expiration": "05/14/2026",
+      "bcba": "Helen Abreu",
       "bcaba": null,
-      "insurance": null,
+      "insurance": "Simply",
       "notes": ""
     },
     {
@@ -79,8 +79,8 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
+      "auth_expiration": "08/02/2026",
+      "bcba": "Roberto Dominguez",
       "bcaba": null,
       "insurance": null,
       "notes": ""
@@ -93,10 +93,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
-      "bcaba": null,
-      "insurance": null,
+      "auth_expiration": "07/29/2026",
+      "bcba": "Leidys Martin" ", " "Ovidio Martinez",
+      "bcaba": "Guillermo Piquera",
+      "insurance": "Sunshine",
       "notes": ""
     },
     {
@@ -107,10 +107,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
+      "auth_expiration": "06/04/2026",
+      "bcba": "Leidys Martin",
       "bcaba": null,
-      "insurance": null,
+      "insurance": "Sunshine",
       "notes": ""
     },
     {
@@ -121,10 +121,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
+      "auth_expiration": "08/02/2026",
+      "bcba": "Leidys Martin" ", " "Ovidio Martin" ", " Odalys Camarero,
       "bcaba": null,
-      "insurance": null,
+      "insurance": "Sunshine",
       "notes": ""
     },
     {
@@ -135,10 +135,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
-      "bcaba": null,
-      "insurance": null,
+      "auth_expiration": "06/02/2026",
+      "bcba": "Leidys Martin",
+      "bcaba": "Guillermo Piquera",
+      "insurance": "Sunshine",
       "notes": "RX expires 05/22/2026 — sent fax"
     },
     {
@@ -150,10 +150,10 @@
       "basc": "ok",
       "vineland": "ok",
       "auth_expiration": null,
-      "bcba": null,
+      "bcba": "Roberto Dominguez",
       "bcaba": null,
-      "insurance": null,
-      "notes": ""
+      "insurance": "Sunshine",
+      "notes": "Brielle Lee Initial has been approved, waiting on mother to send her Intake, FAI, and Insurance Card"
     },
     {
       "name": "Brithany Rodas Zuniga",
@@ -166,8 +166,8 @@
       "auth_expiration": null,
       "bcba": null,
       "bcaba": null,
-      "insurance": null,
-      "notes": ""
+      "insurance": "Sunshine",
+      "notes": "Waiting on new CDE"
     },
     {
       "name": "Caleb Hernandez",
@@ -177,10 +177,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
+      "auth_expiration": "08/02/2026",
+      "bcba": "Helen Abreu",
       "bcaba": null,
-      "insurance": null,
+      "insurance": "Sunshine",
       "notes": ""
     },
     {
@@ -191,10 +191,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
+      "auth_expiration": "05/10/2026",
+      "bcba": "Roberto Dominguez" ", " "Mirian Ortega Gonzalez" ", " "Ovidio Martinez",
       "bcaba": null,
-      "insurance": null,
+      "insurance": "Simply",
       "notes": ""
     },
     {
@@ -205,10 +205,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
+      "auth_expiration": "08/02/2026",
+      "bcba": "Helen Abreu",
       "bcaba": null,
-      "insurance": null,
+      "insurance": "Sunshine",
       "notes": ""
     },
     {
@@ -219,10 +219,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
-      "bcaba": null,
-      "insurance": null,
+      "auth_expiration": "05/29/2026",
+      "bcba": "Leidys Martin" ", " "Ovidio Martinez",
+      "bcaba": "Guillermo Piquera",
+      "insurance": "Sunshine",
       "notes": ""
     },
     {
@@ -233,10 +233,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
-      "bcaba": null,
-      "insurance": null,
+      "auth_expiration": "07/12/2026",
+      "bcba": "Leidys Martin",
+      "bcaba": "Susej Diaz",
+      "insurance": "CMS",
       "notes": ""
     },
     {
@@ -247,10 +247,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
-      "bcaba": null,
-      "insurance": null,
+      "auth_expiration": "07/03/2026",
+      "bcba": "Leidys Martin",
+      "bcaba": "Guillermo Piquera" ", " "Susej Diaz",
+      "insurance": "Sunshine",
       "notes": ""
     },
     {
@@ -261,10 +261,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
-      "bcaba": null,
-      "insurance": null,
+      "auth_expiration": "10/01/2026",
+      "bcba": "Leidys Martin",
+      "bcaba": "Susej Diaz",
+      "insurance": "Sunshine",
       "notes": ""
     },
     {
@@ -275,10 +275,10 @@
       "intake": "missing",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
+      "auth_expiration": "09/11/2026",
+      "bcba": "Leidys Martin" ", " "Alexandra Gonzalez",
       "bcaba": null,
-      "insurance": null,
+      "insurance": "Simply",
       "notes": ""
     },
     {
@@ -289,10 +289,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
-      "bcaba": null,
-      "insurance": null,
+      "auth_expiration": "07/30/2026",
+      "bcba": "Leidys Martin",
+      "bcaba": "Susej Diaz",
+      "insurance": "Sunshine",
       "notes": ""
     },
     {
@@ -304,10 +304,10 @@
       "basc": "ok",
       "vineland": "ok",
       "auth_expiration": null,
-      "bcba": null,
+      "bcba": "Ovidio Martinez",
       "bcaba": null,
-      "insurance": null,
-      "notes": ""
+      "insurance": "Simply",
+      "notes": "Approved for Initial with Simply, waiting for assessment"
     },
     {
       "name": "Emmanuel Pantelakis",
@@ -317,25 +317,25 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
+      "auth_expiration": "08/02/2026",
+      "bcba": "Roberto Dominguez" ", " "Leidys Martin" ", " "Mirian Ortega Gonzalez" ", " "Ovidio Martinez",
       "bcaba": null,
-      "insurance": null,
+      "insurance": "Sunshine",
       "notes": ""
     },
     {
       "name": "Erick DeJesus Lantigua",
-      "rx": { "status": "expired", "expiration": "12/30/1900" },
+      "rx": { "status": "expired", "expiration": "02/18/2026" },
       "insurance_card": "missing",
       "cde": "ok",
       "intake": "missing",
       "basc": "ok",
       "vineland": "ok",
       "auth_expiration": null,
-      "bcba": null,
+      "bcba": "Susej Diaz",
       "bcaba": null,
       "insurance": null,
-      "notes": "RX date likely data entry error (12/30/1900)"
+      "notes": "Waiting on assessment"
     },
     {
       "name": "Ester Morales",
@@ -345,25 +345,25 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": "03/08/2026",
-      "bcba": "Alexandra",
+      "auth_expiration": "06/09/2026",
+      "bcba": "Alexandra Gonzalez" ", " "Leidys Martin",
       "bcaba": null,
-      "insurance": "Carelon",
-      "notes": "Alexandra doing assessment"
+      "insurance": "Simply",
+      "notes": "Titration of hours"
     },
     {
       "name": "Evelyn Cardenas Leon",
-      "rx": { "status": "expired", "expiration": "04/11/2025" },
+      "rx": { "status": "expired", "expiration": "03/16/2027" },
       "insurance_card": "ok",
       "cde": "ok",
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
       "auth_expiration": null,
-      "bcba": null,
-      "bcaba": null,
-      "insurance": null,
-      "notes": "RX expired 04/11/2025 — sent fax"
+      "bcba": "Leidys Martin" ", " "Dayana Mendez",
+      "bcaba": "Guillermo Piquera",
+      "insurance": "Sunshine",
+      "notes": "Completely denied services, P2P scheduled for April 30th"
     },
     {
       "name": "Fredi Diaz",
@@ -373,10 +373,10 @@
       "intake": "ok",
       "basc": "ok",
       "vineland": "ok",
-      "auth_expiration": null,
-      "bcba": null,
+      "auth_expiration": "07/19/2026",
+      "bcba": "Leidys Martin" ", " "Carlos Martinez",
       "bcaba": null,
-      "insurance": null,
+      "insurance": "Sunshine",
       "notes": ""
     },
     {
